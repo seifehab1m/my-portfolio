@@ -1,0 +1,556 @@
+:root {
+    --main-color: #FF9800;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+#loading{
+    z-index: 99999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    background-color: #ccc;
+}
+nav
+{
+    
+    z-index: 9999999;
+    transition: all 1s;
+}
+.title {
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 50px;
+
+
+}
+
+.title img {
+    padding-top: 50px;
+    position: absolute;
+    width: 280px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.title h3 {
+
+    font-size: 80px;
+    font-family: 'Oleo Script', cursive;
+    text-align: center;
+    z-index: 2;
+    color: var(--main-color);
+    width: auto;
+    position: relative;
+}
+
+.title h3::after {
+    content: "";
+    width: 50%;
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--main-color);
+    transform: translate(-50%);
+
+}
+
+/*---- start navbar---- */
+
+#home {
+    min-height: 100vh !important;
+    /* background-color: #000; */
+}
+
+h1 {
+    color: var(--main-color);
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+nav .logo img {
+    width: 70px;
+}
+
+nav ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav ul li .active {
+    font-weight: bold !important;
+    color: var(--main-color) !important;
+
+
+}
+
+nav ul li a {
+    color: white !important;
+    transition: all 0.6s !important;
+
+}
+
+nav ul li a:hover:not(.active) {
+    color: var(--main-color) !important;
+    letter-spacing: 3px;
+    transition: all 0.6s;
+}
+ .icons a 
+{
+    display: inline-block;
+}
+ .icons i {
+    cursor: pointer;
+    padding-left: 20px;
+    transition: all 0.6s;
+    font-size: 18px;
+    color: white;
+    transition: all 0.6s;
+   
+}
+.icons i:hover
+{
+    color: var(--main-color) !important;
+    transition: all 0.6s;
+
+}
+
+h1 {
+    display: none;
+
+}
+
+nav ul li i:hover {
+    color: var(--main-color);
+    transition: all 0.6s;
+}
+.description h2
+{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.7;
+    /* display: none; */
+}
+.seifDes
+{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+
+}
+.description span
+{
+    color: var(--main-color) !important;
+}
+.seifImage
+{
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+    overflow: hidden;
+    height: 50% !important;
+    width: 100%;
+    /* display: none; */
+
+}
+
+
+
+
+.scroll-down {
+    position: relative;
+    color: var(--main-color);
+
+}
+
+.scroll-down i {
+    display: none;
+    animation: scroll 0.5s linear infinite alternate-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translatey(-7px);
+    }
+
+    100% {
+        transform: translatey(7px);
+
+    }
+}
+ @media all and (max-width:529px) {
+
+    .description
+    {
+        padding: 10px !important;
+        min-height: auto !important;
+        
+    }
+    .description h2
+    {
+        margin-top: 50px;
+        padding-top: 50px !important;
+        font-size: 1.7rem !important;
+        line-height: 1.5;
+
+
+    }
+     .seifImage
+    {
+        margin-top: 20px;
+        width: 350px;
+        height: 350px;
+
+
+
+    }
+}
+@media all and (max-width:767px) and (min-width: 530px) {
+    .description
+    {
+        padding: 50px !important;
+        min-height: auto !important;
+
+    }
+    .description h2
+    {
+        margin-top: 50px; 
+        padding-top: 50px !important;
+        padding: 0 !important;
+        font-size: 2.1rem !important;
+        line-height: 1.1;
+        align-items: flex-end !important;
+
+
+    }
+     .seifImage
+    {
+        margin-top: 20px;
+        width: 350px;
+        height: 350px;
+        align-items: flex-start !important;
+
+    }
+}
+
+/*---- End navbar---- */
+
+
+/*---- Start about---- */
+
+.aboutSec {
+    background-color: rgb(250, 246, 246);
+    overflow: hidden;
+}
+
+.aboutSec .image {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px #000 !important;
+
+    visibility:hidden;
+}
+
+.aboutSec .image .layer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    transition: top 0.5s;
+}
+
+.aboutSec .image:hover .layer {
+    top: 0;
+    transition: top 0.5s;
+}
+
+.aboutSec .image img {
+    overflow: hidden;
+
+}
+
+.aboutSec h4 .seif {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+.aboutSec .imageDesc
+{
+    visibility:hidden;
+
+}
+.aboutSec h4 span {
+    color: var(--main-color);
+    font-size: 30px;
+
+}
+
+.aboutSec p {
+    padding: 20px 0px 10px 0px;
+}
+
+.aboutSec .icon i {
+    color: var(--main-color);
+    padding-top: 8px;
+}
+
+.animate__animated.animate__fadeInUpBig,
+.animate__animated.animate__flipInX,
+.animate__animated.animate__lightSpeedInLeft,
+.animate__animated.animate__lightSpeedInRight{
+    --animate-duration: 1.8s;
+}
+
+.aboutSec .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutSec h6
+{
+    color: rgb(54, 54, 54);
+}
+.aboutSec h6 span
+{
+    color: black;
+    font-weight: bold;
+}
+.aboutSec .btn {
+    padding: 10px 50px !important;
+}
+.contactIcons {
+    padding-left: 20px;
+    transition: all 0.6s;
+    font-size: 25px;
+    color: white;
+
+}
+.contactIcons i
+{
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.4s;
+
+}
+.contactIcons i:hover
+{
+    color: var(--main-color);
+    transition: all 0.3s;
+}
+
+
+/*---- End about---- */
+
+/*---- Start Skills---- */
+
+.skiilsSec p
+{
+    display: block;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 28px;
+    z-index: 2;
+    font-family: 'Times New Roman', Times, serif;
+}
+.skillsdescRight
+{
+    visibility: hidden;
+}
+.skillsdescLeft
+{
+    visibility: hidden;
+}
+.skiilsSec .skillsdesc
+{
+    background-color: white;
+
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+}
+.skiilsSec .skillsdesc h6
+{
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+@media all and (max-width:529px) {
+
+    .skiilsSec p
+{
+    width: 100%;
+    font-size: 18px;
+    padding: 0 !important ;
+    padding-bottom: 20px !important;
+
+}
+
+}
+@media all and (max-width:767px) and (min-width: 530px) {
+    .skiilsSec p
+    {
+        width: 100%;
+        font-size: 20px;
+        padding-bottom: 20px !important;
+
+    }
+}
+/*---- End Skills---- */
+/*---- Start Portfolio---- */
+.portfolioSec
+{
+    background-image: url(../images/portbackground.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.portfolioSec .project
+{
+
+    border-radius: 10px;
+    box-shadow: 0px 5px 50px rgb(0 0 0 / 50%);
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid var(--main-color);
+    cursor: pointer;
+
+}
+.portfolioImg
+{
+    transition: all 0.5s;
+
+}
+.portfolioSec .project:hover .portfolioImg
+{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.portfolioSec .project .layer
+{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    transition: top 1s;
+}
+.portfolioSec .project:hover .layer
+{
+    top: 0;
+    transition: top 1s;
+    transition-delay: 0.5s;
+}
+@media all and (max-width:529px) {
+
+    .portfolioSec .container
+{
+    margin-top: 60px !important;
+
+}
+.portfolioSec h3:not(:first-child())
+{
+    font-size: 14px !important;
+    padding: 0px !important;
+
+}
+.portfolioSec p
+{
+    font-size: 10px !important;
+    padding: 0px !important;
+
+}
+
+}
+/*---- End Portfolio---- */
+
+
+/* ------ start Contact ------*/
+#contact
+{
+    background-color: #ccc;
+}
+#contact .getInPar
+{
+    color: #000;
+}
+.cont-contact .container
+{
+    background-color: white;
+    box-shadow: 10px 10px 10px #000;
+}
+#contact .info h6{
+    margin-bottom: 3px;
+}
+#contact .info a{
+    transition: all 0.25s;
+}
+#contact .info a:hover{
+    color: var(--main-color) !important;
+}
+textarea{
+    resize: none;
+}
+#contact i
+{
+    color: var(--main-color);
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--main-color) !important;
+}
+
+#alertSend{
+    display: none;
+}
+#alertName{
+    display: none;
+}
+#alertEmail{
+    display: none;
+}
+#alertMessage{
+    display: none;
+}
+
+/* ------ End Contact */
+/* ------ Start Footer ------ */
+footer
+{
+    width: 100%;
+    height: 120px;
+}
+footer p
+{
+    font-size: 20px;
+}
+footer span
+{
+    color: var(--main-color) !important;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 25px !important;
+}
+@media all and (max-width:589px) {
+    footer p
+    {
+     
+        font-size: 15px !important;
+    }
+    footer span
+    {
+     
+        font-size: 20 px !important;
+    }
+    
+}
+
+/* ------ End Footer ------ */
